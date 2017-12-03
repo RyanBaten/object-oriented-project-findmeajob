@@ -14,18 +14,18 @@ public class MessageFactoryBase {
 
     public MessageFactoryBase() {
     }
-    
+
     public static MessageFactoryBase getInstance()
     {
         if (messageFB == null)
             messageFB = new MessageFactoryBase();
         return messageFB;
     }
-    
+
     public Message createMessage()
     {
-        
+
     }
-    
+
 }
 
