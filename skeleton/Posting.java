@@ -1,49 +1,51 @@
 package FindMeAJob;
 
 public class Posting {
-    private int postingID;
-    private int companyID;
-    private int salary;
-    private String location;
-    private String description;
+	private int postingID;
+	private int companyID;
+	private int salary;
+	private String location;
+	private String description;
 
-    public int getPostingID() {
-        return postingID;
-    }
+        public Posting() {}
 
-    public void setPostingID(int postingID) {
-        this.postingID = postingID;
-    }
+	public int getPostingID() {
+		return postingID;
+	}
 
-    public int getCompanyID() {
-        return companyID;
-    }
+	public void setPostingID(int postingID) {
+		this.postingID = postingID;
+	}
 
-    public void setCompanyID(int companyID) {
-        this.companyID = companyID;
-    }
+	public int getCompanyID() {
+		return companyID;
+	}
 
-    public int getSalary() {
-        return salary;
-    }
+	public void setCompanyID(int companyID) {
+		this.companyID = companyID;
+	}
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
+	public int getSalary() {
+		return salary;
+	}
 
-    public String getLocation() {
-        return location;
-    }
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
+	public String getLocation() {
+		return location;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public void setLocation(String location) {
+		this.location = location;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }

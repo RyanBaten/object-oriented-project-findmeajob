@@ -7,6 +7,8 @@ public class Profile {
 	private String emailAddress;
 	private String major;
 
+        public Posting() {}
+
 	public String getName(){
 		return this.name;
 	}

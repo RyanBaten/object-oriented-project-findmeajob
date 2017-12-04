@@ -1,35 +1,33 @@
 package FindMeAJob;
 
 public class JobApplicationMessage extends Message {
+	private Profile profile;
+	private String message;
+	private int JobID;
 
-    private Profile profile;
-    private String message;
-    private int JobID;
+	public JobApplicationMessage() {}
 
-    public Profile getProfile() {
-        return profile;
-    }
+	public Profile getProfile() {
+		return profile;
+	}
 
-    public void setProfile(Profile profile) {
-        this.profile = profile;
-    }
+	public void setProfile(Profile profile) {
+		this.profile = profile;
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public String getMessage() {
+		return message;
+	}
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-    public int getJobID() {
-        return JobID;
-    }
+	public int getJobID() {
+		return JobID;
+	}
 
-    public void setJobID(int jobID) {
-        JobID = jobID;
-    }
-
-
-
+	public void setJobID(int jobID) {
+		JobID = jobID;
+	}
 }

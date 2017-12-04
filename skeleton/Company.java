@@ -3,6 +3,8 @@ public class Company: extends User{
 	private String industry;
 	private ArrayList<int> postingIDs;
 
+        public Company() {}
+
 	public void setCompanyDetails(CompanySize size, String industry){
 		this.setSize(size);
 		this.setIndustry(industry)

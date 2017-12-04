@@ -10,22 +10,18 @@ package oop;
  * @author zaid
  */
 public class MessageFactoryBase {
-    private static MessageFactoryBase messageFB=null;
+	private static MessageFactoryBase messageFB=null;
 
-    public MessageFactoryBase() {
-    }
+	public MessageFactoryBase() {}
 
-    public static MessageFactoryBase getInstance()
-    {
-        if (messageFB == null)
-            messageFB = new MessageFactoryBase();
-        return messageFB;
-    }
+	public static MessageFactoryBase getInstance(){
+		if (messageFB == null)
+		messageFB = new MessageFactoryBase();
+		return messageFB;
+	}
 
-    public Message createMessage()
-    {
+	public Message createMessage() {
 
-    }
-
+	}
 }
 
