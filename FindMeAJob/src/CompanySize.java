@@ -1,3 +1,3 @@
 public enum CompanySize {
-    SMALL, MEDIUM,  LARGE
+    SMALL, MEDIUM,  LARGE;
 }
