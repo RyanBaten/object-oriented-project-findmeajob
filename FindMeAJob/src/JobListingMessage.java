@@ -1,4 +1,3 @@
-package FindMeAJob;
 
 public class JobListingMessage extends Message {
 	private String message;

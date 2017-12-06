@@ -1,4 +1,3 @@
-package FindMeAJob;
 
 public class Recruiter extends User{
 	private ArrayList<int> companyConnections;

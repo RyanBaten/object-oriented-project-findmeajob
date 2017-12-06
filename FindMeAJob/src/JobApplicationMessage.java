@@ -1,4 +1,3 @@
-package FindMeAJob;
 
 public class JobApplicationMessage extends Message {
 	private Profile profile;

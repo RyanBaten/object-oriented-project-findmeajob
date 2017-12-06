@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oop;
 
 /**
  *
@@ -23,7 +22,7 @@ public class MessageHandler {
 	public void handleMsg(Message message) {
 	}
 	
-	public bool sendMessage(Message message) {
+	public boolean sendMessage(Message message) {
 		return false;
 	}
 }

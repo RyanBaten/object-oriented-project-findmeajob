@@ -1,4 +1,3 @@
-package FindMeAJob;
 
 public abstract class Message {
 	private int messageId;

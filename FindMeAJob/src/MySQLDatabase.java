@@ -30,7 +30,8 @@ public class MySQLDatabase implements Database {
 		return instance;
 	}
 	public User readUser(String username) {
-		ResultSet result = executeQuery("select * from users where user = \"" + username + "\"");
+		//ResultSet result = executeQuery("select * from users where user = \"" + username + "\"");
+		return null;
 	}
 	public boolean writeUser(User user) {
 		return false;

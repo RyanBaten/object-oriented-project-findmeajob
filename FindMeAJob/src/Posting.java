@@ -1,4 +1,3 @@
-package FindMeAJob;
 
 public class Posting {
 	private int postingID;
