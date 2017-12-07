@@ -20,6 +20,9 @@ public class MessageFactoryBase {
 	}
 
 	public Message createMessage() {
+		
+		
+		return null;
 
 	}
 }
