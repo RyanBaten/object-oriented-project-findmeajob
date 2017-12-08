@@ -12,6 +12,6 @@ public interface Database {
 	public Message readMessage(int messageID);
 	public boolean writeMessage(Message message);
 	public boolean deleteMessage(int messageID);
-	public ArrayList<User> searchUser(String query, UserFilter filter);
+	public ArrayList<User> searchUser(String userType, UserFilter filter);
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter);
 }
