@@ -39,3 +39,19 @@ INSERT INTO Jobseeker (jobStatus, username, userID)
 INSERT INTO Jobseeker (jobStatus, username, userID)
  VALUES
 ("EMPLOYED", "Queen Elizabeth", 4);
+
+CREATE TABLE Company
+(
+ username text,
+ companyID int
+)
+
+INSERT INTO Company (username, companyID)
+ VALUES
+("Websales Incorporated", 1);
+INSERT INTO Company (username, companyID)
+ VALUES
+("FindMeAJob Development", 2);
+INSERT INTO Company (username, companyID)
+ VALUES
+("Tech Startup CO", 3);

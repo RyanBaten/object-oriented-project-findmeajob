@@ -96,11 +96,19 @@ public class MySQLDatabase implements Database {
 					currentUser.setUserID(result.getInt("userID"));
 					userList.add(currentUser);
 				}
-			} catch (Exception e) {
-				
-			}
-			this.disconnect();
-			return userList;
+			} catch (Exception e) {}
+		}
+		if (userType.equals("Company")) {
+			String sqlQuery = "SELECT * FROM Jobseeker WHERE companyID like \"%" + query + "%\" AND jobStatus <> \"EMPLOYED\";";
+			ResultSet result = this.execute(sqlQuery);
+			try {
+				while (result.next()) {
+					User currentUser = new Company();
+					currentUser.setUsername(result.getString("username"));
+					currentUser.setUserID(result.getInt("companyID"));
+					userList.add(currentUser);
+				}
+			} catch (Exception e) {}
 		}
 		this.disconnect();
 		return userList;
@@ -116,9 +124,7 @@ public class MySQLDatabase implements Database {
 						result.getInt("salary"), result.getString("location"), result.getString("description"));
 				postingList.add(currentPosting);
 			}
-		} catch (Exception e) {
-			
-		}
+		} catch (Exception e) {}
 		this.disconnect();
 		return postingList;
 	}

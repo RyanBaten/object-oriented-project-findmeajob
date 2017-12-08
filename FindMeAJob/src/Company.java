@@ -5,7 +5,7 @@ public class Company extends User{
 	private String industry;
 	private ArrayList<Integer> postingIDs;
 
-    
+    public Company() {};
 
 	public Company(String username, String password, Profile profile, int userID, CompanySize size, String industry,
 			ArrayList<Integer> postingIDs) {
