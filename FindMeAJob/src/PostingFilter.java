@@ -1,4 +1,4 @@
 
 public enum PostingFilter {
-	SMALL, MEDIUM, LARGE;
+	SMALL, MEDIUM, LARGE, NONE;
 }
