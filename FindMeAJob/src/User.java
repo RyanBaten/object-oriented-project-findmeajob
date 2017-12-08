@@ -7,6 +7,8 @@ public abstract class User {
 	private ArrayList<Integer> messageIDs;
 	private int userID;
 	
+	public User() {};
+	
 	public void removeMessage(int messageID){
 		messageIDs.remove(new Integer(messageID));
 	}
@@ -23,6 +25,10 @@ public abstract class User {
 		return this.messageIDs;
 	}
 
+	public void setUserID (int _userID) {
+		this.userID = _userID;
+	}
+	
 	public int getUserID(){
 		return this.userID;
 	}

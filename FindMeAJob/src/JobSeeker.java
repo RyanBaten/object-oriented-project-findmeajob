@@ -1,3 +1,4 @@
+
 public class JobSeeker extends User{
 	
 	private JobStatus jobStatus;
@@ -14,5 +15,4 @@ public class JobSeeker extends User{
 		super();
 		this.jobStatus = JobStatus.UNEMPLOYED;
 	}
-	
 }
