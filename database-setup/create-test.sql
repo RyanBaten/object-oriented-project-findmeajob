@@ -32,10 +32,10 @@ INSERT INTO Jobseeker (jobStatus, username, userID)
 ("UNEMPLOYED", "John Doe", 1);
 INSERT INTO Jobseeker (jobStatus, username, userID)
  VALUES
-("EMPLOYED_AND_SEARCHING", "John Ode", 2)
+("EMPLOYED_AND_SEARCHING", "John Ode", 2);
 INSERT INTO Jobseeker (jobStatus, username, userID)
  VALUES
-("UNEMPLOYED", "Elvis Presley", 3)
+("UNEMPLOYED", "Elvis Presley", 3);
 INSERT INTO Jobseeker (jobStatus, username, userID)
  VALUES
-("EMPLOYED", "Queen Elizabeth", 4)
+("EMPLOYED", "Queen Elizabeth", 4);
