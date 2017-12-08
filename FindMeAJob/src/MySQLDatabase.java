@@ -64,7 +64,9 @@ public class MySQLDatabase implements Database {
 		return null;
 	}
 	public boolean writeMessage(Message message) {
-		return false;
+		
+		
+		return true;
 	}
 	public boolean deleteMessage(int messageID) {
 		return false;

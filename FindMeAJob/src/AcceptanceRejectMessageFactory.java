@@ -10,7 +10,7 @@ public class AcceptanceRejectMessageFactory extends MessageFactoryBase{
 	}
 	
 	
-	public Message createMessage() {
+	public Message createMessage(String message, int toID, int fromID) {
 		//AcceptanceRejectMessage ARMessage= new AcceptanceRejectMessage();
 		return null;
 		

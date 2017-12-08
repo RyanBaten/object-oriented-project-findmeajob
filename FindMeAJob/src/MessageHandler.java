@@ -23,7 +23,9 @@ public class MessageHandler {
 	}
 	
 	public boolean sendMessage(Message message) {
-		return false;
+		boolean isSent = MySQLDatabase.getInstance().writeMessage(message);
+		
+		return isSent;
 	}
 }
 
