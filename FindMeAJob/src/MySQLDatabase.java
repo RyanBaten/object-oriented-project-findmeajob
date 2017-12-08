@@ -103,9 +103,23 @@ public class MySQLDatabase implements Database {
 			return userList;
 		}
 		this.disconnect();
-		return null;
+		return userList;
 	}
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter) {
-		return null;
+		ArrayList<Posting> postingList = new ArrayList<Posting>();
+		this.connect();
+		String sqlQuery = "SELECT * FROM Postings WHERE description like \"%" + query + "%\";";
+		ResultSet result = this.execute(sqlQuery);
+		try {
+			while (result.next()) {
+				Posting currentPosting = new Posting(result.getInt("postingID"), result.getInt("companyID"),
+						result.getInt("salary"), result.getString("location"), result.getString("description"));
+				postingList.add(currentPosting);
+			}
+		} catch (Exception e) {
+			
+		}
+		this.disconnect();
+		return postingList;
 	}
 }
