@@ -69,7 +69,7 @@ public class MySQLDatabase implements Database {
 	public boolean deleteMessage(int messageID) {
 		return false;
 	}
-	public ArrayList<User> searchUser(String query, UserFilter filter) {
+	public ArrayList<User> searchUser(String query, String userType, UserFilter filter) {
 		return null;
 	}
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter) {
