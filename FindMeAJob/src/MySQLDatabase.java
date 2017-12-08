@@ -8,7 +8,7 @@ public class MySQLDatabase implements Database {
 	
 	public MySQLDatabase() {
 		user = "root";
-		password = "";
+		password = "pass";
 	}
 	private ResultSet executeQuery(String query) {
 		ResultSet result = null;
