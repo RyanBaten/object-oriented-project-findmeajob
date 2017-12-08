@@ -53,4 +53,10 @@ public class Posting {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public void PrintInfo() {
+		System.out.println("Job Description:"+this.description);
+		System.out.println("Salary:"+this.salary);
+		System.out.println("Location:"+this.location);
+
+	}
 }

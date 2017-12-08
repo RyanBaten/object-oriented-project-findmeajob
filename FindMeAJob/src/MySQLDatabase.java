@@ -73,6 +73,12 @@ public class MySQLDatabase implements Database {
 		return null;
 	}
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter) {
-		return null;
+		ArrayList<Posting> fakePostings=new ArrayList<Posting>();
+		Posting post1=new Posting(12, 22, 2100, "Boulder", "Software Eng");
+		Posting post2=new Posting(101, 3, 9100, "Denver", "Whatever");
+
+		fakePostings.add(post1);
+		fakePostings.add(post2);
+		return fakePostings;
 	}
 }

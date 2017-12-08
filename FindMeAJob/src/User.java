@@ -6,7 +6,7 @@ public abstract class User {
 	private Profile profile;
 	private ArrayList<Integer> messageIDs;
 	private int userID;
-
+	
 	public void removeMessage(int messageID){
 		messageIDs.remove(new Integer(messageID));
 	}

@@ -9,7 +9,7 @@ public class JobApplicationMessageFactory extends MessageFactoryBase {
 		return messageFB;
 	}
 	
-	public Message createMessage() {
+	public Message createMessage(String message, int toID, int fromID) {
 		JobApplicationMessage JALMessage=new JobApplicationMessage();
 		return JALMessage;
 		
