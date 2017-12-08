@@ -99,7 +99,7 @@ public class MySQLDatabase implements Database {
 			} catch (Exception e) {}
 		}
 		if (userType.equals("Company")) {
-			String sqlQuery = "SELECT * FROM Jobseeker WHERE companyID like \"%" + query + "%\" AND jobStatus <> \"EMPLOYED\";";
+			String sqlQuery = "SELECT * FROM Jobseeker WHERE companyID = " + query + ";";
 			ResultSet result = this.execute(sqlQuery);
 			try {
 				while (result.next()) {
