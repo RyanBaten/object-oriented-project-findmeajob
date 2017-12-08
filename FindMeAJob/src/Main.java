@@ -5,8 +5,18 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-    	MySQLDatabase MyDB=new MySQLDatabase();
-    	String query="Machine Learning";
+    	Database MyDB=new DatabaseProxy();
+
+    	ArrayList<User> userResults = MyDB.searchUser("John", "Jobseeker", UserFilter.NONE);
+    	userResults.toString();
+    	
+    	for (User user: userResults) {
+    		System.out.println(user.getUsername());
+    	}
+    	
+    	
+    	
+    	/*String query="Machine Learning";
     	PostingFilter queryFilter= PostingFilter.NONE;
     	ArrayList<Posting> postingResults= MyDB.searchPosting(query, queryFilter);
     	
@@ -42,6 +52,6 @@ public class Main {
         }
         else{
         	System.out.println("fail");
-        }
+        }*/
     }
 }

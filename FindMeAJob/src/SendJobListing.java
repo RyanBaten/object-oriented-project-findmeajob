@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class SendJobListing {
 
     public static void main(String[] args) {
-    	MySQLDatabase MyDB=new MySQLDatabase();
+    	
+    	/*MySQLDatabase MyDB=new MySQLDatabase();
     	String query="Machine Learning";
     	PostingFilter queryFilter= PostingFilter.NONE;
     	ArrayList<Posting> postingResults= MyDB.searchPosting(query, queryFilter);
@@ -41,6 +42,6 @@ public class SendJobListing {
         }
         else{
         	System.out.println("fail");
-        }
+        }*/
     }
 }

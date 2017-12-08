@@ -5,23 +5,36 @@ public class MySQLDatabase implements Database {
 	private String user;
 	private String password;
 	private static MySQLDatabase instance;
+	Connection connect;
 	
 	public MySQLDatabase() {
 		user = "root";
 		password = "pass";
 	}
-	private ResultSet executeQuery(String query) {
-		ResultSet result = null;
+	private void connect() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/findmeajob", this.user, this.password);
-			Statement statement = connect.createStatement();
+			this.connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/findmeajob?autoReconnect=true&useSSL=false", this.user, this.password);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	private ResultSet execute(String query) {
+		ResultSet result = null;
+		try {
+			Statement statement = this.connect.createStatement();
 			result = statement.executeQuery(query);
-			connect.close();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		return result;
+	}
+	private void disconnect() {
+		try {
+			this.connect.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		} 
 	}
 	public static MySQLDatabase getInstance() {
 		if (instance == null) {
@@ -72,8 +85,10 @@ public class MySQLDatabase implements Database {
 	}
 	public ArrayList<User> searchUser(String query, String userType, UserFilter filter) {
 		ArrayList<User> userList = new ArrayList<User>();
+		this.connect();
 		if (userType.equals("Jobseeker")) {
-			ResultSet result = this.executeQuery("SELECT * FROM Jobseeker WHERE username like '%" + query + "%' AND jobStatus <> 'EMPLOYED'");
+			String sqlQuery = "SELECT * FROM Jobseeker WHERE username like \"%" + query + "%\" AND jobStatus <> \"EMPLOYED\";";
+			ResultSet result = this.execute(sqlQuery);
 			try {
 				while (result.next()) {
 					User currentUser = new JobSeeker();
@@ -81,11 +96,13 @@ public class MySQLDatabase implements Database {
 					currentUser.setUserID(result.getInt("userID"));
 					userList.add(currentUser);
 				}
-				return userList;
-			} catch (SQLException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				
 			}
+			this.disconnect();
+			return userList;
 		}
+		this.disconnect();
 		return null;
 	}
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter) {
