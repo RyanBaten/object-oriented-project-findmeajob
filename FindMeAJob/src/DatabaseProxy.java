@@ -39,8 +39,8 @@ public class DatabaseProxy implements Database {
 	public boolean deleteMessage(int messageID) {
 		return database.deleteMessage(messageID);
 	}
-	public ArrayList<User> searchUser(String userType, UserFilter filter) {
-		return database.searchUser(userType, filter);
+	public ArrayList<User> searchUser(String query, String userType, UserFilter filter) {
+		return database.searchUser(query, userType, filter);
 	}
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter) {
 		return database.searchPosting(query, filter);

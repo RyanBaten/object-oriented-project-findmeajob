@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class JobSeeker extends User{
 	
@@ -14,7 +13,6 @@ public class JobSeeker extends User{
 
 	public JobSeeker() {
 		super();
-		this.jobStatus = jobStatus.UNEMPLOYED;
+		this.jobStatus = JobStatus.UNEMPLOYED;
 	}
-	
 }

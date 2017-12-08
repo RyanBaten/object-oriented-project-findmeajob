@@ -30,7 +30,6 @@ public class MySQLDatabase implements Database {
 		return instance;
 	}
 	public User readUser(String username) {
-		//ResultSet result = executeQuery("select * from users where user = \"" + username + "\"");
 		return null;
 	}
 	public boolean writeUser(User user) {
@@ -70,15 +69,24 @@ public class MySQLDatabase implements Database {
 		return false;
 	}
 	public ArrayList<User> searchUser(String query, String userType, UserFilter filter) {
+		ArrayList<User> userList = new ArrayList<User>();
+		if (userType.equals("Jobseeker")) {
+			ResultSet result = this.executeQuery("SELECT * FROM Jobseeker WHERE username like '%" + query + "%' AND jobStatus <> 'EMPLOYED'");
+			try {
+				while (result.next()) {
+					User currentUser = new JobSeeker();
+					currentUser.setUsername(result.getString("username"));
+					currentUser.setUserID(result.getInt("userID"));
+					userList.add(currentUser);
+				}
+				return userList;
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 		return null;
 	}
 	public ArrayList<Posting> searchPosting(String query, PostingFilter filter) {
-		ArrayList<Posting> fakePostings=new ArrayList<Posting>();
-		Posting post1=new Posting(12, 22, 2100, "Boulder", "Software Eng");
-		Posting post2=new Posting(101, 3, 9100, "Denver", "Whatever");
-
-		fakePostings.add(post1);
-		fakePostings.add(post2);
-		return fakePostings;
+		return null;
 	}
 }
