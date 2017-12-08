@@ -1,24 +1,34 @@
-public class Company: extends User{
+import java.util.ArrayList;
+
+public class Company extends User{
 	private CompanySize size;
 	private String industry;
-	private ArrayList<int> postingIDs;
+	private ArrayList<Integer> postingIDs;
 
-        public Company() {}
+    
+
+	public Company(String username, String password, Profile profile, int userID, CompanySize size, String industry,
+			ArrayList<Integer> postingIDs) {
+		super();
+		this.size = size;
+		this.industry = industry;
+		this.postingIDs = postingIDs;
+	}
 
 	public void setCompanyDetails(CompanySize size, String industry){
 		this.setSize(size);
-		this.setIndustry(industry)
+		this.setIndustry(industry);
 	}
 
-	public String getSize(){
+	public CompanySize getSize(){
 		return this.size;
 	}
 
 	public String getIndustry(){
-		return this.indusry;
+		return this.industry;
 	}
 
-	public ArrayList<int> getPostingIDs(){
+	public ArrayList<Integer> getPostingIDs(){
 		return this.postingIDs;
 	}
 
@@ -31,10 +41,10 @@ public class Company: extends User{
 	}
 
 	public void addPostingID(int postingID){
-		//?????
+		postingIDs.add(new Integer(postingID));
 	}
 
 	public void removePostingID(int postingID){
-		//????
+		postingIDs.remove(new Integer(postingID));
 	}
 }

@@ -1,10 +1,31 @@
+import java.util.ArrayList;
 
 public class Recruiter extends User{
-	private ArrayList<int> companyConnections;
+	
+	private ArrayList<Integer> companyConnections;
 
-	public Boolean isConnected(String company);
-	public ArrayList<int> getCompanyConnections();
-	public void addCompanyConnection(int copmanyID);
-	public void removeCompanyConnection(int companyID);
+	public Recruiter(ArrayList<Integer> companyConnections) {
+		super();
+		this.companyConnections = companyConnections;
+	}
+	
+	
+	public Boolean isConnected(String company){
+		//???
+		return true;
+	}
+	
+	public ArrayList<Integer> getCompanyConnections(){
+		return this.companyConnections;
+	}
+	
+	
+	public void addCompanyConnection(int companyID){
+		companyConnections.add((new Integer(companyID)));
+	}
+	public void removeCompanyConnection(int companyID){
+		companyConnections.remove((new Integer(companyID)));
+	}
+	
 
 }

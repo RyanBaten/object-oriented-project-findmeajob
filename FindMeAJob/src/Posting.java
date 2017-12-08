@@ -6,7 +6,13 @@ public class Posting {
 	private String location;
 	private String description;
 
-        public Posting() {}
+	public Posting(int postingID, int companyID, int salary, String location, String description) {
+		this.postingID = postingID;
+		this.companyID = companyID;
+		this.salary = salary;
+		this.location = location;
+		this.description = description;
+	}
 
 	public int getPostingID() {
 		return postingID;

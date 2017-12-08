@@ -7,7 +7,17 @@ public class Profile {
 	private String emailAddress;
 	private String major;
 	
-	public Profile() {}
+	public Profile(String name, String location, String employer,
+			int phoneNumber, String address, String emailAddress, String major) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.employer = employer;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+		this.emailAddress = emailAddress;
+		this.major = major;
+	}	
 
 	public String getName(){
 		return this.name;
@@ -32,11 +42,15 @@ public class Profile {
 	public String getEmailAddress(){
 		return this.emailAddress;
 	}
-
+	
+	public String getMajor() {
+		return major;
+	}
+	
 	public void setName(String name){
 		this.name = name;
 	}
-
+	
 	public void setLocation(String location){
 		this.location = location;
 	}
@@ -45,7 +59,7 @@ public class Profile {
 		this.employer = employer;
 	}
 
-	public int setPhoneNumber(int phoneNumber){
+	public void setPhoneNumber(int phoneNumber){
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -55,5 +69,9 @@ public class Profile {
 
 	public void setEmailAddress(String emailAddress){
 		this.emailAddress = emailAddress;
+	}
+	
+	public void setMajor(String major) {
+		this.major = major;
 	}
 }

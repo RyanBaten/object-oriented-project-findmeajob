@@ -1,12 +1,14 @@
+import java.util.ArrayList;
+
 public abstract class User {
 	private String username;
 	private String password;
 	private Profile profile;
-	private ArrayList<int> messageIDs;
+	private ArrayList<Integer> messageIDs;
 	private int userID;
 
 	public void removeMessage(int messageID){
-
+		messageIDs.remove(new Integer(messageID));
 	}
 
 	public String getUsername(){
@@ -17,7 +19,7 @@ public abstract class User {
 		return this.profile;
 	}
 
-	public ArrayList<int> getMessageIDs(){
+	public ArrayList<Integer> getMessageIDs(){
 		return this.messageIDs;
 	}
 

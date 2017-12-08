@@ -27,6 +27,6 @@ public class JobApplicationMessage extends Message {
 	}
 
 	public void setJobID(int jobID) {
-		JobID = jobID;
+		this.JobID = jobID;
 	}
 }

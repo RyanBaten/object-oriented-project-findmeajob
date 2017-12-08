@@ -6,7 +6,6 @@ public abstract class Message {
 	private int receiverUserID;
 	private Boolean isRead;
 
-
 	public int getMessageId() {
 		return messageId;
 	}

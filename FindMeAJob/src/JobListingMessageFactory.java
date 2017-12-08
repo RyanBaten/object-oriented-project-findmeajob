@@ -10,8 +10,7 @@ public class JobListingMessageFactory extends MessageFactoryBase{
 	}
 	
 	public Message createMessage() {
-		
-		JobListingMessage JLMessage=new JobListingMessage();
+		JobListingMessage JLMessage = new JobListingMessage();
 		return JLMessage;
 		
 	}
