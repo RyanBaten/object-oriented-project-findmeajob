@@ -23,7 +23,8 @@ public class MessageHandler {
 	}
 	
 	public boolean sendMessage(Message message) {
-		boolean isSent = MySQLDatabase.getInstance().writeMessage(message);
+		Database db=new DatabaseProxy();
+		boolean isSent = db.writeMessage(message);
 		
 		return isSent;
 	}
