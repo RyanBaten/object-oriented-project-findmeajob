@@ -1,17 +1,17 @@
-FindMeAJob
+#FindMeAJob
 
-Project Contributors
---------------------
+##Project Contributors
+
 Zaid Alali, Justin Chin, Ryan Baten
 
-Demo Requirements
------------------
+##Demo Requirements
+
 java-8-openjdk-amd64
 mysql java library (libmysql-java is the apt-get package name on ubuntu)
 mysql 5.7.20
 
-Setting up the demo database:
------------------------------
+##Setting up the demo database:
+
 cd database-setup
 ./setup.sh <mysql user to connect as>         (user must have permission to create a database)
 
