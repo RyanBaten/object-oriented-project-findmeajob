@@ -13,7 +13,10 @@ mysql 5.7.20
 ## Setting up the demo database:
 
 cd database-setup
-./setup.sh <mysql user to connect as>         (user must have permission to create a database)
+
+./setup.sh mysqlUser
+
+(mysqlUser must have permission to create a database)
 
 All sql commands executed by the setup can be seen in 
 database-setup/create-test.sql
