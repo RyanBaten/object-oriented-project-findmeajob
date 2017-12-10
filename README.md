@@ -7,7 +7,9 @@ Zaid Alali, Justin Chin, Ryan Baten
 ## Demo Requirements
 
 java-8-openjdk-amd64
+
 mysql java library (libmysql-java is the apt-get package name on ubuntu)
+
 mysql 5.7.20
 
 ## Setting up the demo database:
