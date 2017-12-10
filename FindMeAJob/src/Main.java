@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
     	Database MyDB=new DatabaseProxy();
     	Scanner in=new Scanner(System.in);
     	
